@@ -10,33 +10,39 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+/**
+ The game view controller.
+ */
 class GameViewController: UIViewController {
 
+    /**
+     Override view did load.
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
             
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
+            // Show the menu scene.
+            let scene = MenuScene()
+            scene.size = self.view.bounds.size
+            view.presentScene(scene)
         }
     }
 
+    /**
+     Overrides the should auto rotate.
+     */
     override var shouldAutorotate: Bool {
-        return true
+        
+        return false
     }
-
+    
+    /**
+     Overrides the support interface option.
+     */
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
         } else {
@@ -44,7 +50,11 @@ class GameViewController: UIViewController {
         }
     }
 
+    /**
+     Overrides the status bard hidden.
+     */
     override var prefersStatusBarHidden: Bool {
-        return true
+        
+        return false
     }
 }
