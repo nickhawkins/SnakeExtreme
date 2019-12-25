@@ -18,6 +18,13 @@
 		45C035FC23959FAC00F3E7ED /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C035FB23959FAC00F3E7ED /* MenuScene.swift */; };
 		45C035FF2395A03B00F3E7ED /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C035FE2395A03B00F3E7ED /* Label.swift */; };
 		45C036012395A15000F3E7ED /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C036002395A15000F3E7ED /* Button.swift */; };
+		45C72F4623B2AF15004C90A9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C72F4523B2AF15004C90A9 /* Player.swift */; };
+		45C72F4823B4019F004C90A9 /* Head.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C72F4723B4019F004C90A9 /* Head.swift */; };
+		45C72F4A23B401BF004C90A9 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C72F4923B401BF004C90A9 /* Body.swift */; };
+		45C72F4C23B401E1004C90A9 /* Joystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C72F4B23B401E1004C90A9 /* Joystick.swift */; };
+		45C72F4E23B401F4004C90A9 /* Bounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C72F4D23B401F4004C90A9 /* Bounds.swift */; };
+		45C72F5023B40212004C90A9 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C72F4F23B40212004C90A9 /* Food.swift */; };
+		45C72F5223B40253004C90A9 /* Snake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C72F5123B40253004C90A9 /* Snake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +63,13 @@
 		45C035FB23959FAC00F3E7ED /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		45C035FE2395A03B00F3E7ED /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		45C036002395A15000F3E7ED /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		45C72F4523B2AF15004C90A9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		45C72F4723B4019F004C90A9 /* Head.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Head.swift; sourceTree = "<group>"; };
+		45C72F4923B401BF004C90A9 /* Body.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
+		45C72F4B23B401E1004C90A9 /* Joystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joystick.swift; sourceTree = "<group>"; };
+		45C72F4D23B401F4004C90A9 /* Bounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bounds.swift; sourceTree = "<group>"; };
+		45C72F4F23B40212004C90A9 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		45C72F5123B40253004C90A9 /* Snake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +189,13 @@
 			children = (
 				45C035FE2395A03B00F3E7ED /* Label.swift */,
 				45C036002395A15000F3E7ED /* Button.swift */,
+				45C72F4523B2AF15004C90A9 /* Player.swift */,
+				45C72F4723B4019F004C90A9 /* Head.swift */,
+				45C72F4923B401BF004C90A9 /* Body.swift */,
+				45C72F4B23B401E1004C90A9 /* Joystick.swift */,
+				45C72F4D23B401F4004C90A9 /* Bounds.swift */,
+				45C72F4F23B40212004C90A9 /* Food.swift */,
+				45C72F5123B40253004C90A9 /* Snake.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -313,9 +334,16 @@
 				4563EF66239473C3004DB47D /* GameScene.swift in Sources */,
 				45C036012395A15000F3E7ED /* Button.swift in Sources */,
 				45C035FC23959FAC00F3E7ED /* MenuScene.swift in Sources */,
+				45C72F4A23B401BF004C90A9 /* Body.swift in Sources */,
 				4563EF68239473C3004DB47D /* GameViewController.swift in Sources */,
+				45C72F5023B40212004C90A9 /* Food.swift in Sources */,
+				45C72F4623B2AF15004C90A9 /* Player.swift in Sources */,
 				45C035FF2395A03B00F3E7ED /* Label.swift in Sources */,
+				45C72F4C23B401E1004C90A9 /* Joystick.swift in Sources */,
 				4563EF60239473C3004DB47D /* AppDelegate.swift in Sources */,
+				45C72F4E23B401F4004C90A9 /* Bounds.swift in Sources */,
+				45C72F5223B40253004C90A9 /* Snake.swift in Sources */,
+				45C72F4823B4019F004C90A9 /* Head.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
