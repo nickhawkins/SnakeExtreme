@@ -14,6 +14,9 @@ import GameplayKit
  */
 class GameScene: SKScene {
     
+    /**
+     Private variables.
+     */
     private var player: Player?
     
     /**
@@ -27,6 +30,15 @@ class GameScene: SKScene {
         // Set up the player.
         self.player = Player(position: CGPoint(x: view.frame.width / 2, y: view.frame.height / 2))
         self.addChild(self.player!)
+    }
+    
+    /**
+     The update function.
+     */
+    override func update(_ currentTime: TimeInterval) {
+        
+        // Update the player.
+        self.player?.update(currentTime: currentTime)
     }
     
 }

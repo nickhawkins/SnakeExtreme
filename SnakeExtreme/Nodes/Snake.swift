@@ -41,4 +41,13 @@ class Snake : SKNode {
         
         fatalError("init(coder:) has not been implemented")
     }
+    
+    /**
+    Update the snake.
+    */
+    func update(currentTime: CFTimeInterval, joystickActive: Bool, joystickDegrees: CGFloat) {
+        
+        // Update the head.
+        self.head.update(currentTime: currentTime, joystickActive: joystickActive, joystickDegrees: joystickDegrees)
+    }
 }
