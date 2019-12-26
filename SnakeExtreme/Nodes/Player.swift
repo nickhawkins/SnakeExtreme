@@ -18,6 +18,7 @@ class Player : SKNode {
      Private variables.
      */
     private var snake: Snake
+    private var joystick: Joystick
     
     /**
      Initialises a new player.
@@ -27,12 +28,14 @@ class Player : SKNode {
         // Initialise the child nodes.
         self.snake = Snake()
         self.snake.position = position
+        self.joystick = Joystick()
         
         // Super init.
         super.init()
         
         // Add the child nodes.
         self.addChild(self.snake)
+        self.addChild(self.joystick)
     }
 
     /**
@@ -49,6 +52,33 @@ class Player : SKNode {
     func update(currentTime: CFTimeInterval) {
         
         // Update the head.
-        self.snake.update(currentTime: currentTime, joystickActive: false, joystickDegrees: 0)
+        self.snake.update(currentTime: currentTime, joystickActive: joystick.getActive(), joystickDegrees: joystick.getDegrees())
+    }
+    
+    /**
+     Touch began at.
+     */
+    func touchBeganAt(location: CGPoint) {
+        
+        // Enable the joystick.
+        self.joystick.enable(location: location);
+    }
+
+    /**
+     Touch moved to.
+     */
+    func touchMovedTo(location: CGPoint) {
+        
+        // Update the joystick.
+        self.joystick.update(location: location);
+    }
+
+    /**
+     Touch ended.
+     */
+    func touchEnded() {
+        
+        // Disable the joystick.
+        self.joystick.disable()
     }
 }

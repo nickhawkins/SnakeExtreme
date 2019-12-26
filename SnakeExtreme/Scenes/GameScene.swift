@@ -12,7 +12,7 @@ import GameplayKit
 /**
  The game scene.
  */
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     /**
      Private variables.
@@ -39,6 +39,48 @@ class GameScene: SKScene {
         
         // Update the player.
         self.player?.update(currentTime: currentTime)
+    }
+    
+    /**
+     Touch began.
+     */
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        for touch in touches {
+            
+            // Enable the joystick.
+            self.player?.touchBeganAt(location: touch.location(in: self))
+        }
+    }
+    
+    /**
+     Touch Moved.
+     */
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        for touch in touches {
+            
+            // Move the joystick.
+            self.player?.touchMovedTo(location: touch.location(in: self))
+        }
+    }
+    
+    /**
+     Touched ended.
+     */
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        // Disable the joystick.
+        self.player?.touchEnded()
+    }
+    
+    /**
+     Touch cancelled.
+     */
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        // Disable the joystick.
+        self.player?.touchEnded()
     }
     
 }
