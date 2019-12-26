@@ -33,7 +33,7 @@ class Button: SKNode {
         super.init()
 
         // Add the child nodes.
-        isUserInteractionEnabled = true
+        self.isUserInteractionEnabled = true
         addChild(self.label)
     }
     

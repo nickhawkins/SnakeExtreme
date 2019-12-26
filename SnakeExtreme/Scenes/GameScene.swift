@@ -14,4 +14,19 @@ import GameplayKit
  */
 class GameScene: SKScene {
     
+    private var player: Player?
+    
+    /**
+     Did move to view.
+     */
+    override func didMove(to view: SKView) {
+        
+        // Super.
+        super.didMove(to: view)
+        
+        // Set up the player.
+        self.player = Player(position: CGPoint(x: view.frame.width / 2, y: view.frame.height / 2))
+        self.addChild(self.player!)
+    }
+    
 }

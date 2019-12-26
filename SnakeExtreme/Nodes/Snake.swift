@@ -13,5 +13,32 @@ import SpriteKit
  The snake node.
  */
 class Snake : SKNode {
+    
+    /**
+     Private variables.
+     */
+    private var head: Head
+    
+    /**
+     Initialises a new snake.
+     */
+    override init() {
+        
+        // Initialise the child nodes.
+        self.head = Head()
+        
+        // Super init.
+        super.init()
+        
+        // Add the child nodes.
+        self.addChild(self.head)
+    }
 
+    /**
+     Required init.
+     */
+    required init?(coder aDecoder: NSCoder) {
+        
+        fatalError("init(coder:) has not been implemented")
+    }
 }
