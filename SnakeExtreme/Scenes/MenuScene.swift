@@ -19,6 +19,7 @@ class MenuScene: SKScene {
      */
     private var title: Label?
     private var play: Button?
+    private var bestScore: Label?
     
     /**
      Override did move to view.
@@ -34,6 +35,12 @@ class MenuScene: SKScene {
         self.play = Button(height: self.frame.height / 10, width: self.frame.width - 30, text: "Play", buttonAction: goToGame)
         self.play!.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 3)
         addChild(self.play!)
+        
+        // Set up the best score.
+        let bestScore = UserDefaults.standard.integer(forKey: "bestScore")
+        self.bestScore = Label(text: "Best score: " + String(bestScore), fontSize: 16, textColour: UIColor.white)
+        self.bestScore!.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 20)
+        addChild(self.bestScore!)
     }
     
     /**

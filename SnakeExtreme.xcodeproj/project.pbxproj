@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4544A58123E8BAC90089A649 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544A58023E8BAC90089A649 /* Category.swift */; };
+		4544A58323ECB9360089A649 /* Explode.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4544A58223ECB9360089A649 /* Explode.sks */; };
 		4563EF60239473C3004DB47D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563EF5F239473C3004DB47D /* AppDelegate.swift */; };
 		4563EF66239473C3004DB47D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563EF65239473C3004DB47D /* GameScene.swift */; };
 		4563EF68239473C3004DB47D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563EF67239473C3004DB47D /* GameViewController.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		4515CF762395A2F200918562 /* space_invaders.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = space_invaders.ttf; sourceTree = "<group>"; };
+		4544A58023E8BAC90089A649 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		4544A58223ECB9360089A649 /* Explode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explode.sks; sourceTree = "<group>"; };
 		4563EF5C239473C3004DB47D /* SnakeExtreme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnakeExtreme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4563EF5F239473C3004DB47D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4563EF65239473C3004DB47D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				4563EF69239473C3004DB47D /* Main.storyboard */,
 				4563EF6C239473C4004DB47D /* Assets.xcassets */,
 				4563EF6E239473C4004DB47D /* LaunchScreen.storyboard */,
+				4544A58223ECB9360089A649 /* Explode.sks */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				45C72F5423B4E17D004C90A9 /* Position.swift */,
+				4544A58023E8BAC90089A649 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 				4563EF6B239473C3004DB47D /* Main.storyboard in Resources */,
 				4563EF6D239473C4004DB47D /* Assets.xcassets in Resources */,
 				4563EF70239473C4004DB47D /* LaunchScreen.storyboard in Resources */,
+				4544A58323ECB9360089A649 /* Explode.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +360,7 @@
 				45C035FF2395A03B00F3E7ED /* Label.swift in Sources */,
 				45C72F4C23B401E1004C90A9 /* Joystick.swift in Sources */,
 				4563EF60239473C3004DB47D /* AppDelegate.swift in Sources */,
+				4544A58123E8BAC90089A649 /* Category.swift in Sources */,
 				45C72F4E23B401F4004C90A9 /* Bounds.swift in Sources */,
 				45C72F5223B40253004C90A9 /* Snake.swift in Sources */,
 				45C72F4823B4019F004C90A9 /* Head.swift in Sources */,

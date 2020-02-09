@@ -81,4 +81,12 @@ class Player : SKNode {
         // Disable the joystick.
         self.joystick.disable()
     }
+    
+    /**
+     Adds a body part.
+     */
+    func addBodyPart() {
+        
+        self.snake.addBodyPart()
+    }
 }

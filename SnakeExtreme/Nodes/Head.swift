@@ -29,7 +29,15 @@ class Head : SKNode {
     override init() {
         
         // Initialise the child nodes.
-        self.head = SKShapeNode.init(rectOf: CGSize(width: headSize, height: headSize))
+        self.head = SKShapeNode.init(rectOf: CGSize(width: self.headSize, height: self.headSize))
+        self.head.zRotation = CGFloat(Double.pi / 2)
+        self.head.physicsBody = SKPhysicsBody.init(rectangleOf: CGSize(width: self.headSize, height: self.headSize))
+        self.head.physicsBody?.isDynamic = true;
+        self.head.physicsBody?.affectedByGravity = false;
+        self.head.physicsBody?.usesPreciseCollisionDetection = true;
+        self.head.physicsBody?.categoryBitMask = Category.headCategory;
+        self.head.physicsBody?.contactTestBitMask = Category.foodCategory;
+        self.head.physicsBody?.collisionBitMask = 0;
         
         // Super init.
         super.init()
@@ -85,6 +93,23 @@ class Head : SKNode {
             self.head.zRotation += angleChange
         }
     }
+    
+    /**
+     Gets the head positions.
+     */
+    func getPositions() -> [Position] {
+        
+        return self.positions
+    }
+    
+    /**
+     Gets the head speed.
+     */
+    func getSpeed() -> CGFloat {
+        
+        return self.headSpeed;
+    }
+    
     
     /**
      Gets the head degrees.
