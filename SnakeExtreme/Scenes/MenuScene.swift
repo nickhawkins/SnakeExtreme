@@ -39,7 +39,7 @@ class MenuScene: SKScene {
         // Set up the best score.
         let bestScore = UserDefaults.standard.integer(forKey: "bestScore")
         self.bestScore = Label(text: "Best score: " + String(bestScore), fontSize: 16, textColour: UIColor.white)
-        self.bestScore!.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 20)
+        self.bestScore!.position = CGPoint(x: self.frame.width / 2, y: self.frame.height - self.frame.height / 20)
         addChild(self.bestScore!)
     }
     

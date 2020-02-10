@@ -9,11 +9,17 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import GoogleMobileAds
 
 /**
  The game view controller.
  */
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, GADBannerViewDelegate {
+    
+    /**
+     Private variables.
+     */
+    private var bannerView: GADBannerView!
 
     /**
      Override view did load.
@@ -27,6 +33,15 @@ class GameViewController: UIViewController {
             let scene = MenuScene()
             scene.size = self.view.bounds.size
             view.presentScene(scene)
+            
+            // Set up the ad banner.
+            self.bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+            self.bannerView.adUnitID = "ca-app-pub-1013036252774367~9639512020"
+            self.bannerView.rootViewController = self
+            self.bannerView.load(GADRequest())
+            self.bannerView.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(bannerView)
+            view.addConstraints([NSLayoutConstraint(item: self.bannerView, attribute: .bottom, relatedBy: .equal, toItem: bottomLayoutGuide, attribute: .top, multiplier: 1, constant: 0), NSLayoutConstraint(item: self.bannerView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)])
         }
     }
 
@@ -57,4 +72,5 @@ class GameViewController: UIViewController {
         
         return false
     }
+    
 }
