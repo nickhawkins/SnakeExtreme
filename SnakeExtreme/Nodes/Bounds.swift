@@ -27,8 +27,11 @@ class Bounds : SKNode {
      */
     init(rect: CGRect) {
         
-        let topSpace = (UIApplication.shared.keyWindow?.safeAreaInsets.bottom)! + rect.height / 20
-        let floorSpace = rect.height / 10
+        //let topSpace = (UIApplication.shared.keyWindow?.safeAreaInsets.bottom)! + rect.height / 20
+        //let floorSpace = rect.height / 10
+        
+        let topSpace: CGFloat = 0
+        let floorSpace: CGFloat = 0
         
         let floorPoints: [CGPoint] = [CGPoint(x: 0, y: floorSpace), CGPoint(x: rect.size.width, y: floorSpace)]
         let floorPointsPointer = UnsafeMutablePointer<CGPoint>.allocate(capacity: 2)
@@ -55,8 +58,8 @@ class Bounds : SKNode {
         self.floor.physicsBody!.categoryBitMask = Category.boundsCategory;
         self.floor.physicsBody!.contactTestBitMask = Category.headCategory;
         self.floor.physicsBody!.collisionBitMask = 0
-        self.floor.alpha = 1
-        self.floor.strokeColor = UIColor.white
+        floor.alpha = 1
+        self.floor.strokeColor = UIColor.clear
         
         // Build the ceiling.
         self.ceiling = SKShapeNode.init(points: ceilingPointsPointer, count: 2)
@@ -68,7 +71,7 @@ class Bounds : SKNode {
         self.ceiling.physicsBody!.contactTestBitMask = Category.headCategory
         self.ceiling.physicsBody!.collisionBitMask = 0
         self.ceiling.alpha = 1
-        self.ceiling.strokeColor = UIColor.white
+        self.ceiling.strokeColor = UIColor.clear
         
         // Build the left wall.
         self.leftWall = SKShapeNode.init(points: leftWallPointsPointer, count: 2)
@@ -80,7 +83,7 @@ class Bounds : SKNode {
         self.leftWall.physicsBody!.contactTestBitMask = Category.headCategory
         self.leftWall.physicsBody!.collisionBitMask = 0
         self.leftWall.alpha = 1
-        self.leftWall.strokeColor = UIColor.white
+        self.leftWall.strokeColor = UIColor.clear
         
         // Build the right wall.
         self.rightWall = SKShapeNode.init(points: rightWallPointsPointer, count: 2)
@@ -92,7 +95,7 @@ class Bounds : SKNode {
         self.rightWall.physicsBody!.contactTestBitMask = Category.headCategory
         self.rightWall.physicsBody!.collisionBitMask = 0
         self.rightWall.alpha = 1
-        self.rightWall.strokeColor = UIColor.white
+        self.rightWall.strokeColor = UIColor.clear
     
         // Super init.
         super.init()

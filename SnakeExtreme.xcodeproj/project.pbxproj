@@ -21,6 +21,7 @@
 		4563EF70239473C4004DB47D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4563EF6E239473C4004DB47D /* LaunchScreen.storyboard */; };
 		4563EF7B239473C4004DB47D /* SnakeExtremeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563EF7A239473C4004DB47D /* SnakeExtremeTests.swift */; };
 		4563EF86239473C4004DB47D /* SnakeExtremeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563EF85239473C4004DB47D /* SnakeExtremeUITests.swift */; };
+		45A36D07245CB59700A7CF63 /* space_invaders.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4515CF762395A2F200918562 /* space_invaders.ttf */; };
 		45C035FC23959FAC00F3E7ED /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C035FB23959FAC00F3E7ED /* MenuScene.swift */; };
 		45C035FF2395A03B00F3E7ED /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C035FE2395A03B00F3E7ED /* Label.swift */; };
 		45C036012395A15000F3E7ED /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C036002395A15000F3E7ED /* Button.swift */; };
@@ -341,6 +342,7 @@
 				4563EF6D239473C4004DB47D /* Assets.xcassets in Resources */,
 				4563EF70239473C4004DB47D /* LaunchScreen.storyboard in Resources */,
 				4544A58323ECB9360089A649 /* Explode.sks in Resources */,
+				45A36D07245CB59700A7CF63 /* space_invaders.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K3DJA8453B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -563,11 +566,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = hawkinsnick.SnakeExtreme;
+				PRODUCT_BUNDLE_IDENTIFIER = hawkinsnick.Snake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -576,6 +580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K3DJA8453B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -586,11 +591,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = hawkinsnick.SnakeExtreme;
+				PRODUCT_BUNDLE_IDENTIFIER = hawkinsnick.Snake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

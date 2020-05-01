@@ -32,6 +32,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Super.
         super.didMove(to: view)
         
+        self.backgroundColor = UIColor.green
+        
         // Set up the physics world.
         physicsWorld.contactDelegate = self;
         
@@ -48,7 +50,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(self.bounds!)
         
         // Set up the score label.
-        let topSpace = view.frame.height - ((UIApplication.shared.keyWindow?.safeAreaInsets.bottom)! + view.frame.height / 40)
+        let topSpace = view.frame.height - ((UIApplication.shared.keyWindow?.safeAreaInsets.bottom)! + 20 + view.frame.height / 40)
         self.scoreLabel = Label(text: "0", fontSize:  30, textColour: UIColor.white)
         self.scoreLabel!.position = CGPoint(x: view.frame.width / 2, y: topSpace)
         self.addChild(self.scoreLabel!)
@@ -212,8 +214,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         label3.alpha = 0
         addChild(label3)
 
-        let scale = SKAction.scale(to: 0.1, duration: 0.3)
-        let fade = SKAction.fadeOut(withDuration: 0.2)
+        let scale = SKAction.scale(to: 0.1, duration: 0.28)
+        let fade = SKAction.fadeOut(withDuration: 0.18)
         let sequence = SKAction.sequence([scale, fade])
 
         label1.alpha = 1

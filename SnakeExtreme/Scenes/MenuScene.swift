@@ -27,20 +27,20 @@ class MenuScene: SKScene {
     override func didMove(to view: SKView) {
         
         // Set up the title label.
-        self.title = Label(text: "Snake", fontSize: 40, textColour: UIColor.white)
-        self.title!.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 1.6)
+        self.title = Label(text: "Snake Extreme", fontSize: 30, textColour: UIColor.white)
+        self.title!.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 1.2)
         addChild(self.title!)
+        
+        // Set up the best score.
+        let bestScore = UserDefaults.standard.integer(forKey: "bestScore")
+        self.bestScore = Label(text: "Best score: " + String(bestScore), fontSize: 12, textColour: UIColor.white)
+        self.bestScore!.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 1.3)
+        addChild(self.bestScore!)
         
         // Set up the single player button.
         self.play = Button(height: self.frame.height / 10, width: self.frame.width - 30, text: "Play", buttonAction: goToGame)
         self.play!.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 3)
         addChild(self.play!)
-        
-        // Set up the best score.
-        let bestScore = UserDefaults.standard.integer(forKey: "bestScore")
-        self.bestScore = Label(text: "Best score: " + String(bestScore), fontSize: 16, textColour: UIColor.white)
-        self.bestScore!.position = CGPoint(x: self.frame.width / 2, y: self.frame.height - self.frame.height / 20)
-        addChild(self.bestScore!)
     }
     
     /**

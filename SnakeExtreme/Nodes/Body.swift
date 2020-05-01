@@ -17,7 +17,7 @@ class Body : SKNode {
     /**
      Private variables.
      */
-    private var bodySize = 14
+    private var bodySize = 26
     private var bodyParts = [SKShapeNode]()
     
     /**
@@ -68,7 +68,7 @@ class Body : SKNode {
         for bodyPart in self.bodyParts {
             
             // Get the index of the postions.
-            let distance = 1000 / speed
+            let distance = bodySize / 2
             let index = positions.count - ( count + 1 ) * Int(distance)
             if index < 0 {
                 continue

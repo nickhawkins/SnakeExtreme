@@ -18,8 +18,8 @@ class Head : SKNode {
      Private variables.
      */
     private var head: SKShapeNode
-    private var headSize = 14
-    private var headSpeed: CGFloat = 80
+    private var headSize = 26
+    private var headSpeed: CGFloat = 130
     private var lastUpdateTimeInterval: CFTimeInterval = 0
     private var positions: [Position] = [Position]()
     
@@ -86,7 +86,8 @@ class Head : SKNode {
         }
         
         // Update head rotation.
-        let angleChange = self.headSpeed / 1000 / 2
+        //let angleChange = self.headSpeed / 1000 / 2
+        let angleChange: CGFloat = 0.037
         if differenceDegrees <= 180 {
             self.head.zRotation -= angleChange
         } else {
